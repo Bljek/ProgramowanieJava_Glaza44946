@@ -59,12 +59,14 @@ public class Main {
         System.out.println("Porównanie Astry i Astry1: " + astra.equals(astra1));
         System.out.println("Porównanie Astry i Astry: " + astra.equals(astra) + "\n");
 
-        Animal ragnar = new Animal("Dog", "Ragnar");
-        Phone op = new Phone("OnePlus","7 Pro",2999.99, 6.7, "Snapdragon 855",2019);
-        Human me = new Human("Karol","Glaza", op, ragnar, ceed);
+        Animal ragnar = new Animal("Dog", "Ragnar", 500.00);
+        Animal ora = new Animal("Dog", "Ora", 150.00);
+        Phone op6 = new Phone ("OnePlus", "6", 1500.00, 6.5, "Snapdragon 865", 2018);
+        Phone op7p = new Phone("OnePlus","7 Pro",2999.99, 6.7, "Snapdragon 875",2019);
+        Human me = new Human("Karol","Glaza", 0.0, op7p, ragnar, ceed);
+        Human wife = new Human("Alicja", "Glaza", 25000.00, op6, ora, null);
 
-        System.out.println("Zwierze: " + ragnar + "\n" + "Telefon: " + op + "\n" + "Samochód: " + ceed + "\n" + "Ja: " + me);
-
+        System.out.println("Zwierze: " + ragnar + "\n" + "Telefon: " + op7p + "\n" + "Samochód: " + ceed + "\n" + "Ja: " + me);
 
     }
 }

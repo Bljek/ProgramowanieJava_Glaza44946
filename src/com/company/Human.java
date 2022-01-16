@@ -6,21 +6,25 @@ import java.time.LocalDateTime;
 
 public class Human {
     public static Object getSalary;
-    public static Double pensja;
-    String firstName;
+    public Double pensja;
+    public Double cash;
+    public String firstName;
     String lastName;
     Phone phone;
     Animal pet;
     Car car;
+    Human seller;
+    Human buyer;
 
     private Double salary;
     private Double lastSalary;
     private Integer countOfGetting = 0;
     private LocalDateTime lastGet;
 
-    public Human(String firstName, String lastName, Phone phone, Animal pet, Car car){
+    public Human(String firstName, String lastName, Double Cash, Phone phone, Animal pet, Car car){
         this.firstName = firstName;
         this.lastName = lastName;
+        this.cash = cash;
         this.phone = phone;
         this.pet = pet;
         this.car = car;
@@ -31,8 +35,7 @@ public class Human {
             System.out.println("Uwaga! Pensja nie może być niższa niż 0!");
 
         } else if (salary == null) {
-            double a = 2600.00;
-            this.salary = a;
+            this.salary = 2600.00;
             System.out.println("\nNowe dane zostały wysłane do systemu księgowego. \nNie zapomnij odebrać aneksu do umowy od Pani Hanny z działu kadr. \nZUS i US mają już informację o zmianie Twoich dochodów. Próby ukrycia ich nie mają sensu.");
 
         } else {
@@ -67,7 +70,7 @@ public class Human {
         return (Car) car.car();
     }
 
-    public void setCar(Car car){
+    public void buyACar(Car car){
         if (this.salary > car.price){
             System.out.println("Twoje nowe auto czeka na odbiór!");
             this.car = (Car) car.car();
@@ -77,6 +80,16 @@ public class Human {
         } else {
             System.out.println("Zacytuje klasyka: 'Biedaku, nawet złota nie masz'");
         }
+    }
+    public void setCar(Car car){
+            this.car = (Car) car.car();
+        }
+
+        public Animal getPet(){
+        return (Animal) pet.animal();
+        }
+    public void setPet(Animal animal) {
+        this.pet = (Animal) pet.animal();
     }
     public String toString(){
         return firstName + " " + lastName + " " + phone + " " + pet + " " + car;

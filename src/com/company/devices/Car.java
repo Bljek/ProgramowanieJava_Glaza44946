@@ -1,6 +1,8 @@
 package com.company.devices;
 
-public class Car extends Device {
+import com.company.Human;
+
+public class Car extends Device  {
     Double engineSize;
     Integer horsePower;
     String color;
@@ -20,6 +22,20 @@ public class Car extends Device {
         return producer + " " + model + " " + color + " " + horsePower + " " + year + " " + price;
     }
     @Override public void turnOn() {
-        System.out.println("Car is on");
+        System.out.println("Your car is on");
+    }
+
+    public void sell(Human buyer, Human seller, Double price) throws  Exception {
+            if (buyer.cash < price) {
+                throw new Exception("Get more cash");
+            } else if (seller.getCar() != this) {
+                throw new Exception("You can't sell this " + this.model + ". It's doesn't belong to you");
+        } else {
+                buyer.cash = buyer.cash - price;
+                seller.cash = seller.cash + price;
+                buyer.setCar(this);
+                seller.setCar(null);
+                System.out.println(seller.firstName + " just sold " + this.model + " to "+ buyer.firstName + " for " + this.price);
+            }
     }
 }
