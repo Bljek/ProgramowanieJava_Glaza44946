@@ -40,7 +40,6 @@ public class Human {
 
         } else {
             double a = salary;
-            a = salary;
             a = a * 100;
             a = Math.floor(a);
             a = a / 100;
@@ -84,12 +83,17 @@ public class Human {
     public void setCar(Car car){
             this.car = (Car) car.car();
         }
-
         public Animal getPet(){
         return (Animal) pet.animal();
         }
     public void setPet(Animal animal) {
         this.pet = (Animal) pet.animal();
+    }
+    public Phone getPhone(){
+        return (Phone) phone.phone();
+    }
+    public void setPhone(Phone phone) {
+        this.phone = (Phone) phone.phone();
     }
     public String toString(){
         return firstName + " " + lastName + " " + phone + " " + pet + " " + car;

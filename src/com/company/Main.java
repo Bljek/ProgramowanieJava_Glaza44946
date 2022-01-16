@@ -68,5 +68,6 @@ public class Main {
 
         System.out.println("Zwierze: " + ragnar + "\n" + "Telefon: " + op7p + "\n" + "Samochód: " + ceed + "\n" + "Ja: " + me);
 
+
     }
 }

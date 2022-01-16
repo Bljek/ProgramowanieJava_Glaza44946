@@ -1,6 +1,4 @@
 package com.company;
-import com.company.devices.Car;
-
 import java.io.File;
 import java.math.BigDecimal;
 public class Animal {
