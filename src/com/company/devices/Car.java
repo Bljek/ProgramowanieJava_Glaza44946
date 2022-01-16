@@ -1,4 +1,4 @@
-package com.company;
+package com.company.devices;
 
 public class Car {
     Double engineSize;
@@ -7,7 +7,7 @@ public class Car {
     final String model;
     final String producent;
     Integer year;
-    Double price;
+    public Double price;
 
     public Car(String model, String producent, Integer year, String kolor, Integer liczbaKoni, Double price) {
         this.model = model;
@@ -20,5 +20,8 @@ public class Car {
     public Object car(){
         Car car = new Car(this.model, this.producent, this.year, this.color, this.horsePower, this.price);
         return car;
+    }
+    public String toString(){
+        return producent + " " + model + " " + color + " " + horsePower + " " + year + " " + price;
     }
 }

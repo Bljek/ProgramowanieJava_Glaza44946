@@ -1,4 +1,7 @@
 package com.company;
+import com.company.devices.Car;
+import com.company.devices.Phone;
+
 import java.time.LocalDateTime;
 
 public class Human {
@@ -14,6 +17,14 @@ public class Human {
     private Double lastSalary;
     private Integer countOfGetting = 0;
     private LocalDateTime lastGet;
+
+    public Human(String firstName, String lastName, Phone phone, Animal pet, Car car){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phone = phone;
+        this.pet = pet;
+        this.car = car;
+    }
 
     public void setSalary(Double salary) {
         if (salary < 0) {
@@ -66,5 +77,8 @@ public class Human {
         } else {
             System.out.println("Zacytuje klasyka: 'Biedaku, nawet złota nie masz'");
         }
+    }
+    public String toString(){
+        return firstName + " " + lastName + " " + phone + " " + pet + " " + car;
     }
 }
