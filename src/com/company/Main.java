@@ -12,7 +12,7 @@ public class Main {
         me.firstName = "Karol";
         me.lastName = "Glaza";
         me.pet = dog;
-        me.setSalary(2600.00);
+        me.setSalary(12000.00);
 
         //me.pet.feed();
         //System.out.println(me.pet.species);
@@ -43,15 +43,15 @@ public class Main {
         //System.out.println(me.getSalary());
         //me.setSalary(-3000.0);
         //System.out.println(me.getSalary());
-        me.setCar(brak);
+        //me.setCar(brak);
         me.setCar(model3);
         System.out.println("Mój samochód: " + me.getCar().producent + " " + me.getCar().model + " z roku " + me.getCar().year + " i kosztował mnie " + me.getCar().price);
-        me.setCar(vitara);
-        System.out.println("Mój samochód: " + me.getCar().producent + " " + me.getCar().model + " z roku " + me.getCar().year + " i kosztował mnie " + me.getCar().price);
-        me.setCar(ceed);
-        System.out.println("Mój samochód: " + me.getCar().producent + " " + me.getCar().model + " z roku " + me.getCar().year + " i kosztował mnie " + me.getCar().price);
-        me.setCar(astra);
-        System.out.println("Mój samochód: " + me.getCar().producent + " " + me.getCar().model + " z roku " + me.getCar().year + " i kosztował mnie " + me.getCar().price);
+        //me.setCar(vitara);
+        //System.out.println("Mój samochód: " + me.getCar().producent + " " + me.getCar().model + " z roku " + me.getCar().year + " i kosztował mnie " + me.getCar().price);
+        //me.setCar(ceed);
+        //System.out.println("Mój samochód: " + me.getCar().producent + " " + me.getCar().model + " z roku " + me.getCar().year + " i kosztował mnie " + me.getCar().price);
+        //me.setCar(astra);
+        //System.out.println("Mój samochód: " + me.getCar().producent + " " + me.getCar().model + " z roku " + me.getCar().year + " i kosztował mnie " + me.getCar().price);
 
 
     }
