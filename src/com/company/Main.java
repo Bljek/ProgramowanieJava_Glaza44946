@@ -60,7 +60,7 @@ public class Main {
         System.out.println("Porównanie Astry i Astry: " + astra.equals(astra) + "\n");
 
         Animal ragnar = new Animal("Dog", "Ragnar");
-        Phone op = new Phone("OnePlus","7 Pro",2999.99, 6.7, "Snapdragon 855");
+        Phone op = new Phone("OnePlus","7 Pro",2999.99, 6.7, "Snapdragon 855",2019);
         Human me = new Human("Karol","Glaza", op, ragnar, ceed);
 
         System.out.println("Zwierze: " + ragnar + "\n" + "Telefon: " + op + "\n" + "Samochód: " + ceed + "\n" + "Ja: " + me);
