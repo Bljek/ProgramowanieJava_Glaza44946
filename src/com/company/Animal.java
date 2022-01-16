@@ -1,5 +1,8 @@
 package com.company;
+
 import java.io.File;
+import java.math.BigDecimal;
+
 public class Animal {
     final String species;
     String name;
@@ -12,20 +15,18 @@ public class Animal {
 
     public Animal(String species) {
         this.species = species;
-        if (species == "Dog") {
+        if (species.equals("Dog")) {
             weight = DEFAULT_DOG_WEIGHT;
-        } else if (species == "Lion") {
+        } else if (species.equals("Lion")) {
             weight = DEFAULT_LION_WEIGHT;
         } else {
             weight = DEFAULT_OTHER_WEIGHT;
         }
-
     }
 
     void feed() {
-        if (this.isDead == true) {
+        if (this.isDead) {
             System.out.println("Your peat is dead, you can't feed it!");
-            return;
         } else {
             weight += 0.1;
             System.out.println("Thx bro, my weight is now " + weight);
@@ -33,7 +34,7 @@ public class Animal {
     }
 
     void takeForAWalk() {
-        if (this.isDead == true) {
+        if (this.isDead) {
             System.out.println("Your pet is dead, you can't walk with him.");
             return;
         } else {
