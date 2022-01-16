@@ -52,4 +52,19 @@ public class Human {
 
     }
 
+    public Car getCar() {
+        return (Car) car.car();
+    }
+
+    public void setCar(Car car){
+        if (this.salary > car.price){
+            System.out.println("Twoje nowe auto czeka na odbiór!");
+            this.car = (Car) car.car();
+        } else if (salary > (car.price/12)) {
+            System.out.println("Właśnie zostałeś posiadaczem nowego auta! I kredytu...");
+            this.car = (Car) car.car();
+        } else {
+            System.out.println("Zacytuje klasyka: 'Biedaku, nawet złota nie masz'");
+        }
+    }
 }

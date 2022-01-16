@@ -32,19 +32,26 @@ public class Main {
         //   cat.takeForAWalk();
         //}
 
-        Car car = new Car("Astra", "Opel");
-        car.engineSize = 1.5;
-        car.liczbaKoni = 138;
-        car.kolor = "zielony";
+        Car brak = new Car("brak","brak",0,"brak",0,0.0);
+        Car astra = new Car("Astra","Opel",2003,"zielony",85,2500.00);
+        Car ceed = new Car("Ceed","Kia",2010,"czerwony",110,8900.00);
+        Car vitara = new Car("Vitara","Suzuki",2018,"srebrny",210,48000.00);
+        Car model3 = new Car("Model 3","Tesla",2020,"niebieski",450, 110000.00);
+        //me.car = car;
 
-        me.car = car;
-
-        me.setSalary(2600.0);
-        System.out.println(me.getSalary());
-        me.setSalary(-3000.0);
-        System.out.println(me.getSalary());
-
-
+        //me.setSalary(2600.0);
+        //System.out.println(me.getSalary());
+        //me.setSalary(-3000.0);
+        //System.out.println(me.getSalary());
+        me.setCar(brak);
+        me.setCar(model3);
+        System.out.println("Mój samochód: " + me.getCar().producent + " " + me.getCar().model + " z roku " + me.getCar().year + " i kosztował mnie " + me.getCar().price);
+        me.setCar(vitara);
+        System.out.println("Mój samochód: " + me.getCar().producent + " " + me.getCar().model + " z roku " + me.getCar().year + " i kosztował mnie " + me.getCar().price);
+        me.setCar(ceed);
+        System.out.println("Mój samochód: " + me.getCar().producent + " " + me.getCar().model + " z roku " + me.getCar().year + " i kosztował mnie " + me.getCar().price);
+        me.setCar(astra);
+        System.out.println("Mój samochód: " + me.getCar().producent + " " + me.getCar().model + " z roku " + me.getCar().year + " i kosztował mnie " + me.getCar().price);
 
 
     }
